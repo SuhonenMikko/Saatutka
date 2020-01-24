@@ -12,7 +12,7 @@ Angular requires Node.js version 10.9.0 or later.
 1. Clone the repository to your local machine and navigate to cloned folder:
 ```bash
 git clone https://github.com/SuhonenMikko/Saatutka.git
-cd saatutka
+cd Saatutka
 ```
 2. Run `npm install` inside the downloaded/cloned folder:
 ```bash
