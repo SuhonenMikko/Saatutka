@@ -24,5 +24,5 @@ ng serve
 ```
 
 ## Api key
-In order to make API request from the Openweather, you need to place your API key into `saatutka/src/app/weather.service.ts`
+In order to make API request from the Openweather, you need to place your API key into `src/app/weather.service.ts`
 
