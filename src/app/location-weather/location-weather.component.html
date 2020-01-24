@@ -1,0 +1,27 @@
+<div class="row bg-white border-gray rounded-lg mx-2 px-0">
+    <div class="col p-3 p-sm-4">
+        <h1>{{ data.name }}</h1>
+        <h2 class="capitalize">{{ data.weather[0].description }}</h2>
+    </div>
+    <div class="col p-3 p-sm-4 text-nowrap">
+        <div class="float-right">
+            <img style="float:left;" src="http://openweathermap.org/img/w/{{ data.weather[0].icon }}.png" alt="Icon">
+            <span class="temperature ml-2 content-heading">{{ data.main.temp | number:'1.0-0' }} &#176;C</span>
+        </div>
+    </div>
+
+    <div class="w-100"></div>
+
+    <div class="col p-3 p-sm-4 align-self-end">
+        <div class="date">{{ moment.unix(data.dt).format('MMM Do') }}</div>
+        <div class="">{{ moment.unix(data.dt).format('HH:mm') }}</div>
+    </div>
+
+    <div class="col p-3 p-sm-4 align-self-end text-right text-nowrap">
+        <div>Wind: {{ data.wind.speed }} m/s</div>
+        <div>Humidity: {{ data.main.humidity }} %</div>
+        <div>Precipitation (3h): {{ data.rain != undefined ? data.rain['3h'] : 0 }} mm</div>
+    </div>
+</div>
+
+

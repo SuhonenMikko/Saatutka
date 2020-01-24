@@ -1,0 +1,15 @@
+
+<div class="row px-0 mx-1 mx-md-0">
+    <div class="col bg-white border-gray rounded-lg p-0 mx-md-2 mx-1 my-sm-0 my-1" *ngFor="let forecast of weatherForecast">
+        <div class="p-1 p-sm-2 text-center text-nowrap">
+            <div class="d-block">{{ moment(forecast.dt_txt).format('HH:mm') }}</div>
+            <img class="weatherIcon" src="http://openweathermap.org/img/w/{{ forecast.weather[0].icon }}.png" alt="Icon">            
+            <div class="temperature-forecast d-block">{{ forecast.main.temp | number:'1.0-0' }} &#176;C</div>
+        </div>
+        <div class="bg-blue p-1 p-sm-2 text-center text-nowrap">
+            <div>{{ forecast.wind.speed }} m/s</div>
+            <div>{{ forecast.main.humidity }} %</div>
+            <div>{{ forecast.rain != undefined ? (forecast.rain['3h'] | number:'1.0-0') : 0 }} mm</div>
+        </div>
+    </div>
+</div>

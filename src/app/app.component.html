@@ -1,0 +1,30 @@
+<div class="wrapper">
+  <nav class="navbar navbar-expand-lg header bg-white border-gray mb-4">
+    <div class="container">
+      <h1>Säätutka</h1>
+    </div>
+  </nav>
+
+  <div class="container px-sm-2 px-0">
+    <div class="row px-2 mx-0 mb-3">
+      <div class="col p-0">
+        <select class="browser-default custom-select" (change)="cityChanged($event.target.value)">
+          <option selected value="">Kaikki kaupungit</option>
+          <option *ngFor="let data of weatherCurrent" [value]=data.id>{{data.name}}</option>
+        </select>
+      </div>
+    </div>
+
+    <ng-container *ngFor="let data of weatherCurrent" >
+      <div [hidden]="citySelected != data.id && citySelected != null">
+          <div class="mb-2 mb-md-3">
+            <location-weather [data]=data></location-weather>
+          </div>
+          <div class="mb-3">
+            <forecast-weather [id]=data.id></forecast-weather>
+          </div>
+      </div>
+    </ng-container>
+  </div>
+</div>
+<router-outlet></router-outlet>

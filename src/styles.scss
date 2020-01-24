@@ -1,0 +1,64 @@
+
+.wrapper {
+    background-color:#F8F9FA;
+    font-family: "Arial";
+
+  .bg-blue {
+    background-color: #E5F6FD;
+  }
+
+  .header {
+    h1 {
+      width: 100%;
+      left: 0;
+      top: 0;
+      text-align: center;
+      font-size:23pt;
+    }
+  }
+
+  .custom-select {
+    font-size:13pt;
+    color:#262626;
+  }
+
+  .border-gray {
+    border-color:#E6E6E6;
+    border-width: 1pt;
+    border-style:solid;
+  } 
+
+  .row {
+    font-size: 13pt;
+    color:#70757A;
+
+    h1 {
+      font-size: 19pt;
+      color:#262626;
+    }
+
+    h2 {
+      font-size:13pt;
+      columns: #707070;
+    }
+    
+    .temperature {
+      font-size:26pt;
+      color:#262626;
+    }
+
+    .temperature-forecast {
+      font-size:15pt;
+      color: #262626;
+    }
+
+    .date {
+      font-size:15pt;
+      color: #262626;
+    }
+
+    .capitalize::first-letter {
+      text-transform: uppercase;
+    }
+  }
+}
